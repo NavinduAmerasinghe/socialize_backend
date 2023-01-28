@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "socialize_socialMediaWebsite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NavinduAmerasinghe/SurgeInternshipAssignment.git"
+  },
+  "author": "Navindu Amerasinghe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NavinduAmerasinghe/SurgeInternshipAssignment/issues"
+  },
+  "homepage": "https://github.com/NavinduAmerasinghe/SurgeInternshipAssignment#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-and-time": "^2.4.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.19",
+    "socket.io": "^4.5.2",
+    "uuid": "^8.3.2"
+  }
+}
