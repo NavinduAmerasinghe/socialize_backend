@@ -15,9 +15,12 @@ const path = require("path");
 const app = express();
 const { v4: uuidv4 } = require("uuid");
 
+const port = process.env.PORT || 5000;
 dotenv.config();
 
 connectDB = require("./database/connection");
+//Database
+connectDB();
 
 const cors = require("cors");
 
@@ -59,8 +62,9 @@ app.use((error, req, res, next) => {
   res.status(status).json({ message: message });
 });
 
-//Database
-connectDB();
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 
 app.use(cors());
 
@@ -78,10 +82,6 @@ app.use("/Comments", CommentsRouter);
 app.use("/Chat", chatRouter);
 
 app.use("/Messages", messagesRouter);
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
-const port = process.env.PORT || 5000;
 
 //Listner
 app.listen(port, () => {
