@@ -78,8 +78,10 @@ app.use("/Comments", CommentsRouter);
 app.use("/Chat", chatRouter);
 
 app.use("/Messages", messagesRouter);
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 
-// Try all the other verbs, put delete etc
 //Listner
 app.listen(5000, () => {
   console.log("Server started on  port 5000");
